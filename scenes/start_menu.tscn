@@ -1,4 +1,6 @@
-[gd_scene load_steps=0 format=3 uid="uid://c7fwen2kcobeq"]
+[gd_scene load_steps=2 format=3 uid="uid://c7fwen2kcobeq"]
+
+[ext_resource type="Script" uid="uid://cwh6ada2hoxux" path="res://scripts/start_menu.gd" id="1_ouf4f"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ouf4f")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -54,3 +57,7 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
 text = "Quit"
+
+[connection signal="pressed" from="Panel/VBoxContainer/Start_btn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Settings_btn" to="." method="_on_settings_btn_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Quit_btn" to="." method="_on_quit_btn_pressed"]

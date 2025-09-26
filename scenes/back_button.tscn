@@ -3,8 +3,12 @@
 [ext_resource type="Script" uid="uid://buvqs7blin657" path="res://scripts/back_button.gd" id="1_mki26"]
 
 [node name="backButton" type="Button"]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 66.0
+offset_top = 84.0
+offset_right = 136.0
+offset_bottom = 129.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 text = "Back"
 script = ExtResource("1_mki26")
 
