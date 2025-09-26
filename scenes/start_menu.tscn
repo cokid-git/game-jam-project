@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://c7fwen2kcobeq"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -443.5
+offset_top = -365.25
+offset_right = 443.5
+offset_bottom = 365.25
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -247.75
+offset_top = -235.5
+offset_right = 247.75
+offset_bottom = 235.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Start_btn" type="Button" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Start"
+
+[node name="Settings_btn" type="Button" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Settings"
+
+[node name="Quit_btn" type="Button" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Quit"
