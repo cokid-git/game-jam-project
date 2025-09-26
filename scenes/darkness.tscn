@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdd05lh11ybyy"]
+
+[ext_resource type="Script" uid="uid://b2bsh865dkqye" path="res://scripts/darkness.gd" id="1_phdn0"]
+
+[node name="Darkness" type="ColorRect"]
+offset_left = -17.0
+offset_top = -14.0
+offset_right = 1937.0
+offset_bottom = 1096.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_phdn0")

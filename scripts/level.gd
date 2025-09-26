@@ -1,7 +1,7 @@
 extends TileMapLayer
 
 func _ready():
-	pass
+	Global.enableDarkness = false
 
 func _process(delta):
 	pass
