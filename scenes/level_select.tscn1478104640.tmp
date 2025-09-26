@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7oyf473d6cji"]
+
+[ext_resource type="Script" uid="uid://cpvchc5praoo0" path="res://scripts/level_select.gd" id="1_3shnc"]
+
+[node name="levelSelect" type="Node2D"]
+script = ExtResource("1_3shnc")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="One" type="Button" parent="Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Level 1"
+
+[connection signal="pressed" from="Control/One" to="." method="_on_one_pressed"]
