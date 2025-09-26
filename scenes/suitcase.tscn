@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://diurx5v4c8d38"]
+
+[ext_resource type="Texture2D" uid="uid://btwxa3ks7oncv" path="res://assets/rolledluggage.png" id="1_bpxuq"]
+[ext_resource type="Texture2D" uid="uid://cvjnyo6f0yoos" path="res://assets/suitcaseobstacle.png" id="2_4ss3g"]
+[ext_resource type="Texture2D" uid="uid://bc3xfhu75ft7f" path="res://assets/suitcaseobstacle2.png" id="3_0axro"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2ytsa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bpxuq")
+}],
+"loop": true,
+"name": &"Rolled Luggage",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4ss3g")
+}],
+"loop": true,
+"name": &"Suitcase",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0axro")
+}],
+"loop": true,
+"name": &"Suitcase2",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bpxuq"]
+size = Vector2(183, 66)
+
+[node name="Suitcase" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_2ytsa")
+animation = &"Rolled Luggage"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_bpxuq")
