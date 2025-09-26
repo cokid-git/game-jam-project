@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3axvily8tkh4"]
+
+[ext_resource type="Texture2D" uid="uid://bef2s6ct3plih" path="res://icon.svg" id="1_puv5m"]
+[ext_resource type="Script" uid="uid://v4glxuhb5t1d" path="res://scripts/hammer.gd" id="2_01xny"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7cboi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_puv5m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_20s2t"]
+size = Vector2(106.66667, 106.66667)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("2_01xny")
+
+[node name="hammer" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_7cboi")
+
+[node name="Area2D" type="Area2D" parent="hammer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hammer/Area2D"]
+position = Vector2(-1.5894572e-06, 1.5894572e-06)
+shape = SubResource("RectangleShape2D_20s2t")
+
+[connection signal="body_entered" from="hammer/Area2D" to="." method="_on_area_2d_body_entered"]
