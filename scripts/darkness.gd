@@ -5,4 +5,5 @@ func _ready():
 
 func _process(delta):
 	if Global.enableDarkness == true:
-		self_modulate.a = 1.0
+		if self_modulate.a <= 1.0:
+			self_modulate.a += 0.02
