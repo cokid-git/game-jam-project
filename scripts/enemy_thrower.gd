@@ -18,7 +18,6 @@ func _process(delta):
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		get_tree().call_deferred("reload_current_scene")
-		print("dead")
 
 func throwHammer():
 	var hammer = throwable.instantiate()
