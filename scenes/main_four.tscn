@@ -1,53 +1,108 @@
-[gd_scene load_steps=6 format=3 uid="uid://dw2evnull13yq"]
+[gd_scene load_steps=8 format=3 uid="uid://dw2evnull13yq"]
 
 [ext_resource type="Script" uid="uid://cm5pydidb2dp4" path="res://scripts/main_four.gd" id="1_2tnu7"]
 [ext_resource type="PackedScene" uid="uid://ybvksjsb52uf" path="res://scenes/level.tscn" id="1_mr0s4"]
+[ext_resource type="PackedScene" uid="uid://bygiipet5bhsl" path="res://scenes/spike.tscn" id="3_08ev3"]
 [ext_resource type="PackedScene" uid="uid://diurx5v4c8d38" path="res://scenes/suitcase.tscn" id="3_vdals"]
 [ext_resource type="PackedScene" uid="uid://b1h7l86kn3qbl" path="res://scenes/cheese.tscn" id="4_vqeot"]
 [ext_resource type="PackedScene" uid="uid://d3tk6g38gnnh" path="res://scenes/cane.tscn" id="5_vqeot"]
+[ext_resource type="PackedScene" uid="uid://k6f2d814dvwa" path="res://scenes/enemy_thrower.tscn" id="6_67xv4"]
 
 [node name="main_four" type="Node2D"]
 script = ExtResource("1_2tnu7")
 
-[node name="TileMapLayer" parent="." instance=ExtResource("1_mr0s4")]
+[node name="spike" parent="." instance=ExtResource("3_08ev3")]
+position = Vector2(436.00006, 884.0001)
+
+[node name="spike2" parent="." instance=ExtResource("3_08ev3")]
+position = Vector2(599, 881.99994)
+
+[node name="spike3" parent="." instance=ExtResource("3_08ev3")]
+position = Vector2(1021.00006, 811.99994)
+
+[node name="spike4" parent="." instance=ExtResource("3_08ev3")]
+position = Vector2(1491, 696)
+
+[node name="spike5" parent="." instance=ExtResource("3_08ev3")]
+position = Vector2(1364.9999, 696)
 
 [node name="Suitcase" parent="." instance=ExtResource("3_vdals")]
 position = Vector2(328, 992)
+animation = &"Suitcase"
 
 [node name="Suitcase2" parent="." instance=ExtResource("3_vdals")]
 position = Vector2(517, 926)
 
 [node name="Suitcase3" parent="." instance=ExtResource("3_vdals")]
 position = Vector2(517, 994)
+animation = &"Suitcase2"
 
 [node name="Suitcase4" parent="." instance=ExtResource("3_vdals")]
 position = Vector2(646, 930)
 rotation = 1.5707964
+animation = &"Suitcase"
 
 [node name="Suitcase5" parent="." instance=ExtResource("3_vdals")]
 position = Vector2(859, 932)
 rotation = 1.5707964
+animation = &"Suitcase"
 
 [node name="Suitcase6" parent="." instance=ExtResource("3_vdals")]
 position = Vector2(1125, 936)
 rotation = 1.5707964
+animation = &"Suitcase2"
 
 [node name="Suitcase7" parent="." instance=ExtResource("3_vdals")]
 position = Vector2(1245, 934)
 rotation = 1.5707964
+animation = &"Suitcase"
 
 [node name="Suitcase8" parent="." instance=ExtResource("3_vdals")]
 position = Vector2(1330, 934)
 rotation = 1.5707964
+animation = &"Suitcase"
 
 [node name="Suitcase9" parent="." instance=ExtResource("3_vdals")]
 position = Vector2(1316, 805)
 
 [node name="Suitcase10" parent="." instance=ExtResource("3_vdals")]
-position = Vector2(1374, 731)
+position = Vector2(1410, 739)
 
 [node name="cheese" parent="." instance=ExtResource("4_vqeot")]
 position = Vector2(392, 926)
 
+[node name="cheese2" parent="." instance=ExtResource("4_vqeot")]
+position = Vector2(1285, 739)
+
+[node name="cheese3" parent="." instance=ExtResource("4_vqeot")]
+position = Vector2(833, 787)
+
+[node name="cheese4" parent="." instance=ExtResource("4_vqeot")]
+position = Vector2(899, 787)
+scale = Vector2(-1, 1)
+
 [node name="Cane" parent="." instance=ExtResource("5_vqeot")]
 position = Vector2(997, 844)
+
+[node name="enemyThrower" parent="." instance=ExtResource("6_67xv4")]
+position = Vector2(1144, 803)
+
+[node name="spike10" parent="." instance=ExtResource("3_08ev3")]
+position = Vector2(689.99994, 1018.2941)
+
+[node name="spike11" parent="." instance=ExtResource("3_08ev3")]
+position = Vector2(714.9997, 1018.2941)
+
+[node name="spike12" parent="." instance=ExtResource("3_08ev3")]
+position = Vector2(739.9997, 1018.2941)
+
+[node name="spike13" parent="." instance=ExtResource("3_08ev3")]
+position = Vector2(764.9997, 1018.2941)
+
+[node name="spike14" parent="." instance=ExtResource("3_08ev3")]
+position = Vector2(789.9997, 1018.2941)
+
+[node name="spike15" parent="." instance=ExtResource("3_08ev3")]
+position = Vector2(814.99994, 1018.2941)
+
+[node name="TileMapLayer" parent="." instance=ExtResource("1_mr0s4")]
