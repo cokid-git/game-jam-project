@@ -1,8 +1,59 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7l6pu1c0baj3"]
+[gd_scene load_steps=7 format=3 uid="uid://b7l6pu1c0baj3"]
 
 [ext_resource type="Script" uid="uid://cxpi5oaox5q86" path="res://scripts/global.gd" id="1_4pk28"]
+[ext_resource type="AudioStream" uid="uid://bbbyo8bb56tgu" path="res://sounds/music/Title.wav" id="2_opebo"]
+[ext_resource type="AudioStream" uid="uid://dg1cd4sisx3qy" path="res://sounds/music/Level Selection.mp3" id="3_m3l3d"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_opebo"]
+stream_count = 1
+stream_0 = ExtResource("2_opebo")
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_m3l3d"]
+stream_count = 1
+stream_0 = ExtResource("3_m3l3d")
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_nelfd"]
+clip_count = 2
+clip_0/name = &"Title"
+clip_0/stream = SubResource("AudioStreamPlaylist_opebo")
+clip_0/auto_advance = 0
+clip_1/name = &"Level Selection"
+clip_1/stream = SubResource("AudioStreamPlaylist_m3l3d")
+clip_1/auto_advance = 0
+_transitions = {
+Vector2i(0, 0): {
+"fade_beats": 0.0,
+"fade_mode": 0,
+"from_time": 0,
+"to_time": 1
+},
+Vector2i(0, 1): {
+"fade_beats": 1.0,
+"fade_mode": 4,
+"from_time": 1,
+"to_time": 1
+},
+Vector2i(1, 0): {
+"fade_beats": 1.0,
+"fade_mode": 4,
+"from_time": 1,
+"to_time": 1
+},
+Vector2i(1, 1): {
+"fade_beats": 0.0,
+"fade_mode": 0,
+"from_time": 0,
+"to_time": 0
+}
+}
 
 [node name="global" type="Node2D"]
 script = ExtResource("1_4pk28")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="globalAudio" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="globalAudio"]
+stream = SubResource("AudioStreamInteractive_nelfd")
+volume_db = -20.0
+autoplay = true
+bus = &"music"

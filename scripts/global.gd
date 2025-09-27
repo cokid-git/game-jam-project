@@ -1,6 +1,6 @@
 extends Node2D
 
-
+var audioLocation = "Title" #Title, Setting, Level, Enemy Level
 
 var level = 1
 
