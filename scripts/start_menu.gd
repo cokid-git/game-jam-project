@@ -3,7 +3,7 @@ extends Control
 
 
 func _ready() -> void:
-	pass
+	Global.audioLocation = "Title"
 
 
 func _on_start_btn_pressed() -> void:

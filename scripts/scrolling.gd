@@ -7,5 +7,5 @@ func _ready():
 
 func _process(delta):
 	position.x += -3
-	if position.x <= origin.x - 594:
+	if position.x <= origin.x - 148.5:
 		position = origin

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dkgpf3yr1oed5"
+path="res://.godot/imported/Level without bosses (Edit).wav-37c16fc50c24b878ddf8427a1eecbc25.sample"
+
+[deps]
+
+source_file="res://sounds/music/Level without bosses (Edit).wav"
+dest_files=["res://.godot/imported/Level without bosses (Edit).wav-37c16fc50c24b878ddf8427a1eecbc25.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

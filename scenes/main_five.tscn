@@ -1,7 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://c8fo1xcom81wa"]
+[gd_scene load_steps=3 format=3 uid="uid://c8fo1xcom81wa"]
 
 [ext_resource type="PackedScene" uid="uid://ybvksjsb52uf" path="res://scenes/level.tscn" id="1_ft1dc"]
+[ext_resource type="Script" uid="uid://s8ufpx6o0qhx" path="res://scripts/main_five.gd" id="1_sr3j8"]
 
-[node name="main_two" type="Node2D"]
+[node name="main_five" type="Node2D"]
+script = ExtResource("1_sr3j8")
 
 [node name="TileMapLayer" parent="." instance=ExtResource("1_ft1dc")]

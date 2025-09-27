@@ -1,6 +1,9 @@
 extends Node2D
 
-var audioLocation = "Title" #Title, Setting, Level, Enemy Level
+@export var musicPlayer: AudioStreamPlayer
+
+var audioLocation = "Title" #Title, Level Selection, Level, Enemy Level
+var currentAudio = "Title" #Cannot be touched externally
 
 var level = 1
 
@@ -8,3 +11,16 @@ var enableDarkness = false
 
 var volumeMusic = 50
 var volumeSound = 50
+
+func _ready() -> void:
+	currentAudio = audioLocation
+	
+func _process(delta: float) -> void:
+	if currentAudio != audioLocation:
+		currentAudio = audioLocation
+		updateMusic()
+
+func updateMusic():
+	#print(musicPlayer["parameters/switch_to_clip"])
+	#musicPlayer["parameters/switch_to_clip"] = "Title"
+	pass

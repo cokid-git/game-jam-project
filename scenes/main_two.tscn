@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://c6odipiv2k6b6"]
+[gd_scene load_steps=6 format=3 uid="uid://c6odipiv2k6b6"]
 
 [ext_resource type="PackedScene" uid="uid://ybvksjsb52uf" path="res://scenes/level.tscn" id="1_1qffr"]
 [ext_resource type="PackedScene" uid="uid://d3tk6g38gnnh" path="res://scenes/cane.tscn" id="1_3j186"]
+[ext_resource type="Script" uid="uid://bvel62ximgt7o" path="res://scripts/main_two.gd" id="1_g2ax1"]
 [ext_resource type="PackedScene" uid="uid://bygiipet5bhsl" path="res://scenes/spike.tscn" id="2_m0ooy"]
 [ext_resource type="PackedScene" uid="uid://diurx5v4c8d38" path="res://scenes/suitcase.tscn" id="2_o0djn"]
 
 [node name="main_two" type="Node2D"]
+script = ExtResource("1_g2ax1")
 
 [node name="spike" parent="." instance=ExtResource("2_m0ooy")]
 position = Vector2(444, 949.9999)

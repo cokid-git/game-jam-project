@@ -1,5 +1,8 @@
 extends Control
 
+func _ready() -> void:
+	Global.audioLocation = "Level Selection"
+
 const LEVEL_SCENES := {
 	1: "res://scenes/main_one.tscn",
 	2: "res://scenes/main_two.tscn",

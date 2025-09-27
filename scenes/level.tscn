@@ -187,7 +187,6 @@ script = ExtResource("2_w7c3h")
 
 [node name="background" parent="." instance=ExtResource("3_klq6b")]
 z_index = -1
-position = Vector2(958, 539)
 
 [node name="goal" parent="." instance=ExtResource("3_w8frs")]
 position = Vector2(1904, 980)

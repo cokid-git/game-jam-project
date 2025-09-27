@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://bi5j3c5i83yhw"]
+[gd_scene load_steps=6 format=3 uid="uid://bi5j3c5i83yhw"]
 
+[ext_resource type="Script" uid="uid://d1ye4kqvfo2ue" path="res://scripts/main_three.gd" id="1_gv8g4"]
 [ext_resource type="PackedScene" uid="uid://ybvksjsb52uf" path="res://scenes/level.tscn" id="1_o5fob"]
 [ext_resource type="PackedScene" uid="uid://diurx5v4c8d38" path="res://scenes/suitcase.tscn" id="2_7ym6h"]
 [ext_resource type="PackedScene" uid="uid://d3tk6g38gnnh" path="res://scenes/cane.tscn" id="3_e0h5y"]
 [ext_resource type="PackedScene" uid="uid://k6f2d814dvwa" path="res://scenes/enemy_thrower.tscn" id="4_e0h5y"]
 
-[node name="main_two" type="Node2D"]
+[node name="main_three" type="Node2D"]
+script = ExtResource("1_gv8g4")
 
 [node name="TileMapLayer" parent="." instance=ExtResource("1_o5fob")]
 
