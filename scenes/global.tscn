@@ -75,13 +75,10 @@ Vector2i(3, 1): {
 }
 }
 
-[node name="global" type="Node2D" node_paths=PackedStringArray("musicPlayer")]
+[node name="global" type="Node2D"]
 script = ExtResource("1_4pk28")
-musicPlayer = NodePath("globalAudio/AudioStreamPlayer")
 
-[node name="globalAudio" type="Node" parent="."]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="globalAudio"]
+[node name="Music" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamInteractive_nelfd")
 volume_db = -20.0
 autoplay = true
