@@ -1,7 +1,7 @@
 extends Node2D
 
-#@export var musicPlayer: AudioStreamPlayer
-@onready var musicPlayer = $Music
+@export var musicPlayer : AudioStreamPlayer
+#@onready var musicPlayer = $Music
 
 var audioLocation: String #Title, Level Selection, Level, Enemy Level
 var currentAudio: String #Cannot be touched externally
@@ -22,6 +22,4 @@ func _process(delta: float) -> void:
 		updateMusic()
 
 func updateMusic():
-	print(musicPlayer)
-	#musicPlayer["parameters/switch_to_clip"] = str(currentAudio)
-	pass
+	musicPlayer["parameters/switch_to_clip"] = str(currentAudio)

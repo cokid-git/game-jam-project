@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bi5j3c5i83yhw"]
+[gd_scene load_steps=7 format=3 uid="uid://bi5j3c5i83yhw"]
 
 [ext_resource type="Script" uid="uid://d1ye4kqvfo2ue" path="res://scripts/main_three.gd" id="1_gv8g4"]
 [ext_resource type="PackedScene" uid="uid://ybvksjsb52uf" path="res://scenes/level.tscn" id="1_o5fob"]
 [ext_resource type="PackedScene" uid="uid://diurx5v4c8d38" path="res://scenes/suitcase.tscn" id="2_7ym6h"]
+[ext_resource type="PackedScene" uid="uid://bygiipet5bhsl" path="res://scenes/spike.tscn" id="3_60atx"]
 [ext_resource type="PackedScene" uid="uid://d3tk6g38gnnh" path="res://scenes/cane.tscn" id="3_e0h5y"]
 [ext_resource type="PackedScene" uid="uid://k6f2d814dvwa" path="res://scenes/enemy_thrower.tscn" id="4_e0h5y"]
 
@@ -10,6 +11,18 @@
 script = ExtResource("1_gv8g4")
 
 [node name="TileMapLayer" parent="." instance=ExtResource("1_o5fob")]
+
+[node name="spike" parent="." instance=ExtResource("3_60atx")]
+position = Vector2(570.00006, 814.0001)
+
+[node name="spike2" parent="." instance=ExtResource("3_60atx")]
+position = Vector2(695.99994, 813.9999)
+
+[node name="spike3" parent="." instance=ExtResource("3_60atx")]
+position = Vector2(822, 814)
+
+[node name="spike4" parent="." instance=ExtResource("3_60atx")]
+position = Vector2(1544.9999, 949.99994)
 
 [node name="Suitcase" parent="." instance=ExtResource("2_7ym6h")]
 position = Vector2(350, 993)
@@ -20,10 +33,12 @@ position = Vector2(385, 925)
 [node name="Suitcase3" parent="." instance=ExtResource("2_7ym6h")]
 position = Vector2(515, 934)
 rotation = 1.5707964
+animation = &"Suitcase2"
 
 [node name="Suitcase4" parent="." instance=ExtResource("2_7ym6h")]
 position = Vector2(816, 936)
 rotation = 1.5707964
+animation = &"Suitcase"
 
 [node name="Cane" parent="." instance=ExtResource("3_e0h5y")]
 position = Vector2(684, 846)
@@ -31,16 +46,19 @@ position = Vector2(684, 846)
 [node name="Suitcase5" parent="." instance=ExtResource("2_7ym6h")]
 position = Vector2(994.5, 934)
 rotation = 1.5707964
+animation = &"Suitcase2"
 
 [node name="Suitcase6" parent="." instance=ExtResource("2_7ym6h")]
 position = Vector2(1295.5, 936)
 rotation = 1.5707964
+animation = &"Suitcase2"
 
 [node name="Suitcase7" parent="." instance=ExtResource("2_7ym6h")]
 position = Vector2(1462, 994)
+animation = &"Suitcase"
 
 [node name="Cane2" parent="." instance=ExtResource("3_e0h5y")]
 position = Vector2(1163.5, 846)
 
 [node name="enemyThrower" parent="." instance=ExtResource("4_e0h5y")]
-position = Vector2(1298, 803)
+position = Vector2(1313, 803)

@@ -6,8 +6,10 @@ const HAMMER_TIME = 2
 
 var elapsedTime = 0
 
+var deltaTracker = 0
+
 func _ready():
-	pass
+	elapsedTime = HAMMER_TIME / 2
 
 func _process(delta):
 	elapsedTime += delta

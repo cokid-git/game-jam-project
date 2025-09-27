@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var startVelocityX = -400
+var startVelocityX = -300
 var startVelocityY = -600
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
