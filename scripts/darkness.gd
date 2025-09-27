@@ -13,5 +13,5 @@ func _process(delta):
 
 
 				# Debug
-			print("Alpha:", self_modulate.a)
+			#print("Alpha:", self_modulate.a)
 			#self_modulate.a += 0.2 

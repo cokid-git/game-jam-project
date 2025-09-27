@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://qildwl5si7x7"
+path="res://.godot/imported/walking (Edit).wav-563fcf208262bdcf1a2dbd1f45ea8a13.sample"
+
+[deps]
+
+source_file="res://sounds/sfx/walking (Edit).wav"
+dest_files=["res://.godot/imported/walking (Edit).wav-563fcf208262bdcf1a2dbd1f45ea8a13.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

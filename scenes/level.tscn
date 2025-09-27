@@ -196,7 +196,7 @@ scale = Vector2(0.15, 0.72343713)
 self_modulate = Color(1, 1, 1, 0)
 
 [node name="player" parent="." instance=ExtResource("5_2r41h")]
-position = Vector2(51, 1002)
+position = Vector2(51, 995)
 scale = Vector2(2, 2)
 
 [node name="backButton" parent="." instance=ExtResource("4_mx8sn")]

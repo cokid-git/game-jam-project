@@ -1,27 +1,99 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs1cjud8g0qrv"]
+[gd_scene load_steps=13 format=3 uid="uid://bs1cjud8g0qrv"]
 
 [ext_resource type="Script" uid="uid://codnrygofkare" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://bef2s6ct3plih" path="res://icon.svg" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://biiptm45yyjj3" path="res://assets/idle.png" id="2_g2els"]
+[ext_resource type="AudioStream" uid="uid://qildwl5si7x7" path="res://sounds/sfx/walking (Edit).wav" id="3_dqkch"]
+[ext_resource type="Texture2D" uid="uid://5oxm83khugi7" path="res://assets/jump.png" id="3_fjrip"]
+[ext_resource type="AudioStream" uid="uid://smlar4hcxkv3" path="res://sounds/sfx/Jump.mp3" id="4_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://p0a88apgx52w" path="res://assets/walk1.png" id="4_smehm"]
+[ext_resource type="Texture2D" uid="uid://btb3o86760312" path="res://assets/walk2.png" id="5_ur7pv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g2brh"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_qhqgy")
+"texture": ExtResource("2_g2els")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_fjrip")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_smehm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ur7pv")
+}],
+"loop": true,
+"name": &"walk",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(14, 28)
 
-[node name="player" type="CharacterBody2D" groups=["player"]]
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_tuyoq"]
+fade_time = 0.0
+stream_count = 1
+stream_0 = ExtResource("3_dqkch")
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_fjrip"]
+loop = false
+fade_time = 0.0
+stream_count = 1
+stream_0 = ExtResource("4_qlg0r")
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_smehm"]
+clip_count = 2
+clip_0/name = &"Walk"
+clip_0/stream = SubResource("AudioStreamPlaylist_tuyoq")
+clip_0/auto_advance = 0
+clip_1/name = &"Jump"
+clip_1/stream = SubResource("AudioStreamPlaylist_fjrip")
+clip_1/auto_advance = 0
+_transitions = {
+Vector2i(0, 1): {
+"fade_beats": 0.0,
+"fade_mode": 0,
+"from_time": 0,
+"to_time": 1
+},
+Vector2i(1, 0): {
+"fade_beats": 0.0,
+"fade_mode": 0,
+"from_time": 0,
+"to_time": 1
+}
+}
+
+[node name="player" type="CharacterBody2D" node_paths=PackedStringArray("sfxPlayer", "sfxJump", "sprite") groups=["player"]]
 script = ExtResource("1_g2els")
+sfxPlayer = NodePath("Walk")
+sfxJump = NodePath("Jump")
+sprite = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.15, 0.15)
+scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_g2brh")
+animation = &"idle"
+frame_progress = 0.19002482
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_g2els")
+
+[node name="Walk" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamInteractive_smehm")
+volume_db = -80.0
+
+[node name="Jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_qlg0r")
+volume_db = -30.0
