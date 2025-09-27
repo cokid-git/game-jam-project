@@ -10,8 +10,6 @@
 [node name="main_three" type="Node2D"]
 script = ExtResource("1_gv8g4")
 
-[node name="TileMapLayer" parent="." instance=ExtResource("1_o5fob")]
-
 [node name="spike" parent="." instance=ExtResource("3_60atx")]
 position = Vector2(570.00006, 814.0001)
 
@@ -62,3 +60,5 @@ position = Vector2(1163.5, 846)
 
 [node name="enemyThrower" parent="." instance=ExtResource("4_e0h5y")]
 position = Vector2(1313, 803)
+
+[node name="TileMapLayer" parent="." instance=ExtResource("1_o5fob")]

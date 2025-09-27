@@ -1,6 +1,7 @@
 extends AnimatedSprite2D
 
 @export var throwable : PackedScene
+@export var sfxPlayer : AudioStreamPlayer
 
 const HAMMER_TIME = 2
 
@@ -15,6 +16,7 @@ func _process(delta):
 	elapsedTime += delta
 	if elapsedTime >= HAMMER_TIME:
 		throwHammer()
+		sfxPlayer.play()
 		elapsedTime = 0
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
