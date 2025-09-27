@@ -1,4 +1,4 @@
-extends TileMapLayer
+extends Node2D
 
 func _ready():
 	Global.enableDarkness = false
