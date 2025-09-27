@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://d3tk6g38gnnh"]
+
+[ext_resource type="Texture2D" uid="uid://jtc67yvte8n6" path="res://assets/cane.png" id="1_n30yt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_77tqj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_n30yt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_633jo"]
+size = Vector2(418, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h0hui"]
+size = Vector2(36, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwyfc"]
+size = Vector2(37, 16)
+
+[node name="Cane" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_77tqj")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, -14)
+shape = SubResource("RectangleShape2D_633jo")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(189, 16)
+shape = SubResource("RectangleShape2D_h0hui")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(188.5, -32)
+shape = SubResource("RectangleShape2D_vwyfc")
