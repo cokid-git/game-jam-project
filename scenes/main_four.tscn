@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dw2evnull13yq"]
+
+[ext_resource type="PackedScene" uid="uid://ybvksjsb52uf" path="res://scenes/level.tscn" id="1_mr0s4"]
+
+[node name="main_two" type="Node2D"]
+
+[node name="TileMapLayer" parent="." instance=ExtResource("1_mr0s4")]

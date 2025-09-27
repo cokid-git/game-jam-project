@@ -12,7 +12,7 @@ script = ExtResource("1_0vklx")
 position = Vector2(1111, 953)
 
 [node name="spike4" parent="." instance=ExtResource("4_oqoyn")]
-position = Vector2(1385, 881.00006)
+position = Vector2(1385, 884)
 
 [node name="spike5" parent="." instance=ExtResource("4_oqoyn")]
 position = Vector2(1563, 1018)

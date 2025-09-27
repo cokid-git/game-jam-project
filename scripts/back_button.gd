@@ -2,6 +2,7 @@ extends Control
 
 func _on_pressed() -> void:
 	var scene_name = get_tree().current_scene.name
+	print(scene_name)
 	
 	# Ensure the current scene is properly loaded before attempting to switch
 	if scene_name == "":
@@ -11,13 +12,12 @@ func _on_pressed() -> void:
 	# Define the target scene based on the current scene name
 	var target_scene = ""
 	
-	if scene_name == "levelSelect":
+	if scene_name == "Level_Select":
 		target_scene = "res://scenes/start_menu.tscn"
 	elif scene_name == "start_menu":
 		target_scene = "res://scenes/level_select.tscn"
 	else:
-		print("Warning: Unknown current scene name: %s. No scene transition performed." % scene_name)
-		return
+		target_scene = "res://scenes/level_select.tscn"
 
 
 	

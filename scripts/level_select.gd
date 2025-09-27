@@ -3,24 +3,25 @@ extends Control
 const LEVEL_SCENES := {
 	1: "res://scenes/main_one.tscn",
 	2: "res://scenes/main_two.tscn",
+	3: "res://scenes/main_three.tscn",
+	4: "res://scenes/main_four.tscn",
+	5: "res://scenes/main_five.tscn",
 }
 
 func _on_level_1_pressed() -> void:
-	print("Level 1")
 	load_level(1)
 
 func _on_level_2_pressed() -> void:
-	print("Level 2")
 	load_level(2)
 
 func _on_level_3_pressed() -> void:
-	print("Level 3 (not implemented yet)")
+	load_level(3)
 
 func _on_level_4_pressed() -> void:
-	print("Level 4 (not implemented yet)")
+	load_level(4)
 
 func _on_level_5_pressed() -> void:
-	print("Level 5 (not implemented yet)")
+	load_level(5)
 
 func load_level(level: int) -> void:
 	Global.level = level

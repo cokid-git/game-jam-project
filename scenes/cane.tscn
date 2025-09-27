@@ -14,27 +14,27 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_633jo"]
-size = Vector2(418, 20)
+size = Vector2(411, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0hui"]
-size = Vector2(36, 40)
+size = Vector2(29, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vwyfc"]
-size = Vector2(37, 16)
+size = Vector2(30, 16)
 
 [node name="Cane" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_77tqj")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-2, -14)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-5.5, -14)
 shape = SubResource("RectangleShape2D_633jo")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(189, 16)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(185.5, 16)
 shape = SubResource("RectangleShape2D_h0hui")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(188.5, -32)
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(185, -32)
 shape = SubResource("RectangleShape2D_vwyfc")

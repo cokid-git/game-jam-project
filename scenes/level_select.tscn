@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7oyf473d6cji"]
+[gd_scene load_steps=3 format=3 uid="uid://b7oyf473d6cji"]
 
 [ext_resource type="Script" uid="uid://cpvchc5praoo0" path="res://scripts/level_select.gd" id="1_3shnc"]
+[ext_resource type="PackedScene" uid="uid://ctasu2f3uperg" path="res://scenes/back_button.tscn" id="2_p0wlc"]
 
 [node name="Level_Select" type="Control"]
 layout_mode = 3
@@ -74,6 +75,13 @@ custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "5"
+
+[node name="backButton" parent="." instance=ExtResource("2_p0wlc")]
+layout_mode = 0
+offset_left = 1845.0
+offset_top = 28.0
+offset_right = 1890.0
+offset_bottom = 59.0
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/level2" to="." method="_on_level_2_pressed"]
