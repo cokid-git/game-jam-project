@@ -7,48 +7,37 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="scrolling" type="Node2D" parent="."]
-position = Vector2(1445.5001, 542.25)
-scale = Vector2(0.7499999, 0.75)
+position = Vector2(1590, 543)
 script = ExtResource("2_cbsqf")
 
 [node name="Sprite2D" type="Sprite2D" parent="scrolling"]
-position = Vector2(312, -292.00012)
+position = Vector2(600, -228)
 scale = Vector2(0.5812988, 0.5812988)
 texture = ExtResource("3_wisxt")
 
 [node name="Sprite2D2" type="Sprite2D" parent="scrolling"]
-position = Vector2(-282, -292.00012)
+position = Vector2(6, -228)
 scale = Vector2(0.5812988, 0.5812988)
 texture = ExtResource("3_wisxt")
 
 [node name="Sprite2D3" type="Sprite2D" parent="scrolling"]
-position = Vector2(-876, -292.00012)
+position = Vector2(-588, -228)
 scale = Vector2(0.5812988, 0.5812988)
 texture = ExtResource("3_wisxt")
 
 [node name="Sprite2D4" type="Sprite2D" parent="scrolling"]
-position = Vector2(-1469.9998, -292.00012)
+position = Vector2(-1182, -228)
 scale = Vector2(0.5812988, 0.5812988)
 texture = ExtResource("3_wisxt")
 
-[node name="Sprite2D5" type="Sprite2D" parent="scrolling"]
-position = Vector2(906.0001, -292)
-scale = Vector2(0.5812989, 0.5812988)
-texture = ExtResource("3_wisxt")
-
-[node name="Sprite2D6" type="Sprite2D" parent="scrolling"]
-position = Vector2(1500, -292)
-scale = Vector2(0.5812989, 0.5812988)
-texture = ExtResource("3_wisxt")
-
 [node name="ColorRect" type="ColorRect" parent="scrolling"]
-offset_left = -1910.0004
-offset_top = -723.0
-offset_right = 2035.3336
-offset_bottom = 277.0
-color = Color(0.76, 0.1824, 0.7022398, 0.67058825)
+offset_left = -1497.0
+offset_top = -551.0
+offset_right = 862.0
+offset_bottom = 137.0
+color = Color(0.8, 0.17600003, 0.7375998, 0.5803922)
 
 [node name="background" type="Sprite2D" parent="."]
-position = Vector2(959, 540)
-scale = Vector2(0.7507811, 0.75)
+position = Vector2(960, 540)
+scale = Vector2(0.7515625, 0.75)
 texture = ExtResource("3_jougr")

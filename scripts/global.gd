@@ -2,8 +2,8 @@ extends Node2D
 
 @export var musicPlayer: AudioStreamPlayer
 
-var audioLocation = "Title" #Title, Level Selection, Level, Enemy Level
-var currentAudio = "Title" #Cannot be touched externally
+var audioLocation: String #Title, Level Selection, Level, Enemy Level
+var currentAudio: String #Cannot be touched externally
 
 var level = 1
 
@@ -21,6 +21,5 @@ func _process(delta: float) -> void:
 		updateMusic()
 
 func updateMusic():
-	#print(musicPlayer["parameters/switch_to_clip"])
-	#musicPlayer["parameters/switch_to_clip"] = "Title"
-	pass
+	print(musicPlayer["volume_db"])
+	#musicPlayer["parameters/switch_to_clip"] = str(currentAudio)
