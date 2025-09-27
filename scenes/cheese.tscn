@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1h7l86kn3qbl"]
+
+[ext_resource type="Texture2D" uid="uid://cwvwmfq1smeqv" path="res://assets/cheese.png" id="1_6ih6m"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_gv6i6"]
+custom_solver_bias = 0.865
+points = PackedVector2Array(-34, 33, 33, -33, 33, 33)
+
+[node name="cheese" type="Sprite2D"]
+texture = ExtResource("1_6ih6m")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("ConvexPolygonShape2D_gv6i6")
