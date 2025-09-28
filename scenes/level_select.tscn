@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b7oyf473d6cji"]
+[gd_scene load_steps=20 format=3 uid="uid://b7oyf473d6cji"]
 
 [ext_resource type="Script" uid="uid://cpvchc5praoo0" path="res://scripts/level_select.gd" id="1_3shnc"]
 [ext_resource type="PackedScene" uid="uid://ddrt2ilfy4kkl" path="res://scenes/title_background.tscn" id="2_2epne"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://10n7wcedxe00" path="res://assets/fonts/CaveatBrush-Regular.ttf" id="3_rif6e"]
 [ext_resource type="Texture2D" uid="uid://sl73y708btxa" path="res://assets/buttonSquare_brown.png" id="4_r77uv"]
 [ext_resource type="Texture2D" uid="uid://bn4iwaoipm33h" path="res://assets/buttonSquare_brown_pressed.png" id="5_4nqmc"]
+[ext_resource type="Texture2D" uid="uid://djtji78fg8h2q" path="res://assets/ui/tile_0037.png" id="7_4nqmc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rif6e"]
 texture = ExtResource("4_r77uv")
@@ -38,6 +39,9 @@ texture = ExtResource("5_4nqmc")
 texture = ExtResource("4_r77uv")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0wyvj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m4qq5"]
+texture = ExtResource("7_4nqmc")
 
 [node name="Level_Select" type="Control"]
 layout_mode = 3
@@ -140,10 +144,13 @@ text = "5"
 
 [node name="backButton" parent="." instance=ExtResource("2_p0wlc")]
 layout_mode = 0
-offset_left = 1845.0
+offset_left = 1817.0
 offset_top = 28.0
 offset_right = 1890.0
-offset_bottom = 59.0
+offset_bottom = 77.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_m4qq5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m4qq5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m4qq5")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/level2" to="." method="_on_level_2_pressed"]
