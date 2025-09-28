@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://b7l6pu1c0baj3"]
+[gd_scene load_steps=12 format=3 uid="uid://b7l6pu1c0baj3"]
 
 [ext_resource type="Script" uid="uid://cxpi5oaox5q86" path="res://scripts/global.gd" id="1_4pk28"]
 [ext_resource type="AudioStream" uid="uid://bbbyo8bb56tgu" path="res://sounds/music/Title.wav" id="2_opebo"]
 [ext_resource type="AudioStream" uid="uid://d3d51c7qjara3" path="res://sounds/music/Level Choice Screen (Edit).wav" id="3_nelfd"]
 [ext_resource type="AudioStream" uid="uid://dkgpf3yr1oed5" path="res://sounds/music/Level without bosses (Edit).wav" id="4_nelfd"]
 [ext_resource type="AudioStream" uid="uid://cu1xpmipunbk7" path="res://sounds/music/Boss Fight.wav" id="5_6rlim"]
+[ext_resource type="AudioStream" uid="uid://bjyb8qlqop6js" path="res://sounds/sfx/User Presses Play.mp3" id="6_6rlim"]
 
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_opebo"]
 stream_count = 1
@@ -81,12 +82,17 @@ Vector2i(3, 1): {
 }
 }
 
-[node name="global" type="Node2D" node_paths=PackedStringArray("musicPlayer")]
+[node name="global" type="Node2D" node_paths=PackedStringArray("musicPlayer", "whistle")]
 script = ExtResource("1_4pk28")
 musicPlayer = NodePath("Music")
+whistle = NodePath("playWhistle")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamInteractive_nelfd")
 volume_db = -20.0
 autoplay = true
 bus = &"music"
+
+[node name="playWhistle" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_6rlim")
+volume_db = -20.0
