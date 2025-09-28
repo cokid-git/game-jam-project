@@ -16,6 +16,7 @@ func _ready():
 func _process(delta):
 	velocity.x = startVelocityX
 	velocity.y += (1.5 * gravity) * delta
+	rotation += 0.5
 	move_and_slide()
 	
 
