@@ -61,4 +61,16 @@ position = Vector2(1163.5, 846)
 [node name="enemyThrower" parent="." instance=ExtResource("4_e0h5y")]
 position = Vector2(1313, 803)
 
+[node name="spike6" parent="." instance=ExtResource("3_60atx")]
+position = Vector2(868.99994, 1018.29407)
+
+[node name="spike7" parent="." instance=ExtResource("3_60atx")]
+position = Vector2(894.00006, 1018.29407)
+
+[node name="spike8" parent="." instance=ExtResource("3_60atx")]
+position = Vector2(919.00006, 1018.29407)
+
+[node name="spike9" parent="." instance=ExtResource("3_60atx")]
+position = Vector2(944.00006, 1018.29407)
+
 [node name="TileMapLayer" parent="." instance=ExtResource("1_o5fob")]
