@@ -12,7 +12,23 @@ animations = [{
 "texture": ExtResource("1_bll2k")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bll2k")
+}],
+"loop": true,
+"name": &"prep throw",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bll2k")
+}],
+"loop": true,
+"name": &"throw",
 "speed": 5.0
 }]
 
@@ -22,6 +38,7 @@ size = Vector2(106.66666, 113.33333)
 [node name="enemyThrower" type="AnimatedSprite2D" node_paths=PackedStringArray("sfxPlayer")]
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_20xgf")
+animation = &"throw"
 script = ExtResource("2_20xgf")
 throwable = ExtResource("3_q5d2s")
 sfxPlayer = NodePath("AudioStreamPlayer")
