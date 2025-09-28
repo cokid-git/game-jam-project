@@ -109,9 +109,9 @@ position = Vector2(927, 927)
 position = Vector2(538, 569)
 
 [node name="enemyThrower" parent="." instance=ExtResource("7_ijlwk")]
-position = Vector2(1349, 490)
+position = Vector2(1349, 498)
 
 [node name="enemyThrower2" parent="." instance=ExtResource("7_ijlwk")]
-position = Vector2(1649, 995)
+position = Vector2(1649, 1002.99994)
 
 [node name="TileMapLayer" parent="." instance=ExtResource("1_ft1dc")]

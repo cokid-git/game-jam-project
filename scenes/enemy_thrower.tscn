@@ -37,7 +37,7 @@ animations = [{
 size = Vector2(150.00005, 220.00006)
 
 [node name="enemyThrower" type="AnimatedSprite2D" node_paths=PackedStringArray("sfxPlayer", "sprite")]
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_20xgf")
 animation = &"throw"
 flip_h = true

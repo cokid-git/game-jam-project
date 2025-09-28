@@ -85,7 +85,7 @@ scale = Vector2(-1, 1)
 position = Vector2(997, 844)
 
 [node name="enemyThrower" parent="." instance=ExtResource("6_67xv4")]
-position = Vector2(1144, 790)
+position = Vector2(1144, 798)
 
 [node name="spike10" parent="." instance=ExtResource("3_08ev3")]
 position = Vector2(689.99994, 1018.2941)

@@ -23,6 +23,7 @@ z_index = -1
 position = Vector2(1907.0001, 1004)
 
 [node name="Darkness" parent="." instance=ExtResource("6_klq6b")]
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 
 [node name="player" parent="." instance=ExtResource("5_2r41h")]
