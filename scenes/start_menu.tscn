@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://c7fwen2kcobeq"]
+[gd_scene load_steps=14 format=3 uid="uid://c7fwen2kcobeq"]
 
 [ext_resource type="Script" uid="uid://cwh6ada2hoxux" path="res://scripts/start_menu.gd" id="1_ouf4f"]
 [ext_resource type="Texture2D" uid="uid://dn1ssbmxkdxve" path="res://assets/ui/panel_beigeLight.png" id="2_h61rw"]
-[ext_resource type="PackedScene" path="res://scenes/title_background.tscn" id="3_fcv5n"]
+[ext_resource type="PackedScene" uid="uid://ddrt2ilfy4kkl" path="res://scenes/title_background.tscn" id="3_fcv5n"]
 [ext_resource type="Texture2D" uid="uid://bmxc6x5hlyqd" path="res://assets/ui/buttonLong_brown.png" id="3_m7x51"]
+[ext_resource type="FontFile" uid="uid://10n7wcedxe00" path="res://assets/fonts/CaveatBrush-Regular.ttf" id="4_4v6gu"]
 [ext_resource type="Texture2D" uid="uid://6wqny6duexg5" path="res://assets/ui/buttonLong_brown_pressed.png" id="4_h61rw"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m7x51"]
@@ -60,10 +61,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -443.5
-offset_top = -157.25
-offset_right = 443.5
-offset_bottom = 242.75
+offset_left = -443.0
+offset_top = -157.0
+offset_right = 444.0
+offset_bottom = 243.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_m7x51")
@@ -86,7 +87,8 @@ alignment = 1
 [node name="Start_btn" type="Button" parent="Panel_Main/VBoxContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_font_sizes/font_size = 35
+theme_override_fonts/font = ExtResource("4_4v6gu")
+theme_override_font_sizes/font_size = 55
 theme_override_styles/normal = SubResource("StyleBoxTexture_h61rw")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_fcv5n")
 theme_override_styles/hover = SubResource("StyleBoxTexture_fcv5n")
@@ -95,7 +97,8 @@ text = "Start"
 [node name="Settings_btn" type="Button" parent="Panel_Main/VBoxContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_font_sizes/font_size = 35
+theme_override_fonts/font = ExtResource("4_4v6gu")
+theme_override_font_sizes/font_size = 55
 theme_override_styles/normal = SubResource("StyleBoxTexture_4v6gu")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_nxjfj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_nxjfj")
@@ -104,7 +107,8 @@ text = "Settings"
 [node name="Quit_btn" type="Button" parent="Panel_Main/VBoxContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_font_sizes/font_size = 35
+theme_override_fonts/font = ExtResource("4_4v6gu")
+theme_override_font_sizes/font_size = 55
 theme_override_styles/normal = SubResource("StyleBoxTexture_u4qax")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_5byqq")
 theme_override_styles/hover = SubResource("StyleBoxTexture_5byqq")
