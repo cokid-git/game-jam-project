@@ -36,6 +36,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ouf4f")
 
+[node name="titleBackground" parent="." instance=ExtResource("3_fcv5n")]
+
 [node name="SettingsContainer" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -50,8 +52,6 @@ offset_bottom = 242.75
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_m7x51")
-
-[node name="titleBackground" parent="." instance=ExtResource("3_fcv5n")]
 
 [node name="Panel_Main" type="Panel" parent="."]
 layout_mode = 1

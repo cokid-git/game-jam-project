@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://fsl7n6dqefpm"]
+[gd_scene load_steps=6 format=3 uid="uid://fsl7n6dqefpm"]
 
-[ext_resource type="Script" uid="uid://csteyklhgkg5y" path="res://scripts/settings_panel.gd" id="1_54ti7"]
+[ext_resource type="Script" path="res://scripts/settings_panel.gd" id="1_54ti7"]
 [ext_resource type="Texture2D" uid="uid://dn1ssbmxkdxve" path="res://assets/ui/panel_beigeLight.png" id="1_qtqyt"]
-[ext_resource type="PackedScene" uid="uid://ddrt2ilfy4kkl" path="res://scenes/title_background.tscn" id="2_8fxpn"]
 [ext_resource type="Texture2D" uid="uid://bmxc6x5hlyqd" path="res://assets/ui/buttonLong_brown.png" id="2_tl2iu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tl2iu"]
@@ -33,14 +32,15 @@ script = ExtResource("1_54ti7")
 musicSlider = NodePath("Panel_Main/VBoxContainer/HSlider")
 soundSlider = NodePath("Panel_Main/VBoxContainer/HSlider2")
 
-[node name="titleBackground" parent="." instance=ExtResource("2_8fxpn")]
-position = Vector2(-516.5, -174.75)
-
 [node name="Panel_Main" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 11.5
+offset_top = 203.25
+offset_right = 11.5
+offset_bottom = -127.25
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_tl2iu")
