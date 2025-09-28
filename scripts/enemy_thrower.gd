@@ -10,6 +10,7 @@ var elapsedTime = 0
 var deltaTracker = 0
 
 func _ready():
+	sfxPlayer.volume_db = (0.6*Global.volumeSound) - 80
 	elapsedTime = HAMMER_TIME / 2
 
 func _process(delta):

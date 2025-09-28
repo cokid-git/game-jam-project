@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://fsl7n6dqefpm"]
+[gd_scene load_steps=6 format=3 uid="uid://fsl7n6dqefpm"]
 
+[ext_resource type="Script" uid="uid://csteyklhgkg5y" path="res://scripts/settings_panel.gd" id="1_54ti7"]
 [ext_resource type="Texture2D" uid="uid://dn1ssbmxkdxve" path="res://assets/ui/panel_beigeLight.png" id="1_qtqyt"]
 [ext_resource type="Texture2D" uid="uid://bmxc6x5hlyqd" path="res://assets/ui/buttonLong_brown.png" id="2_tl2iu"]
 
@@ -14,7 +15,7 @@ texture_margin_top = 8.0
 texture_margin_right = 8.0
 texture_margin_bottom = 12.0
 
-[node name="SettingsPanel" type="Control"]
+[node name="SettingsPanel" type="Control" node_paths=PackedStringArray("musicSlider", "soundSlider")]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -27,6 +28,9 @@ offset_right = 443.5
 offset_bottom = 365.25
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_54ti7")
+musicSlider = NodePath("Panel_Main/VBoxContainer/HSlider")
+soundSlider = NodePath("Panel_Main/VBoxContainer/HSlider2")
 
 [node name="Panel_Main" type="Panel" parent="."]
 layout_mode = 1
@@ -71,6 +75,7 @@ horizontal_alignment = 1
 [node name="HSlider2" type="HSlider" parent="Panel_Main/VBoxContainer"]
 layout_mode = 2
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_54ti7")
+value = 100.0
 
 [node name="Back_btn" type="Button" parent="Panel_Main/VBoxContainer"]
 layout_mode = 2

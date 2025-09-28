@@ -9,6 +9,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var playSound = 0
 
 func _ready():
+	sfxPlayer.volume_db = (0.55*Global.volumeSound) - 80
 	position.y -= 80
 	velocity.y = startVelocityY
 

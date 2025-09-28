@@ -24,6 +24,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var canWalk = false
 
 func _ready():
+	sfxPlayer.volume_db = (0.5*Global.volumeSound) - 80
+	sfxJump.volume_db = (0.5*Global.volumeSound) - 80
 	get_tree().create_timer(START_TIME).timeout.connect(enableMovement)
 	sfxPlayer["parameters/switch_to_clip"] = str("Walk")
 	sfxPlayer.play()

@@ -11,8 +11,8 @@ var level = 1
 
 var enableDarkness = false
 
-var volumeMusic = 50
-var volumeSound = 50
+var volumeMusic = 100
+var volumeSound = 100
 
 var canPlayWhistle = false
 
@@ -20,6 +20,8 @@ func _ready() -> void:
 	currentAudio = audioLocation
 	
 func _process(delta: float) -> void:
+	musicPlayer.volume_db = (0.6*volumeMusic) - 80
+	whistle.volume_db = (0.6*volumeMusic) - 80
 	if currentAudio != audioLocation:
 		currentAudio = audioLocation
 		updateMusic()
