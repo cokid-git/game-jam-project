@@ -2,6 +2,7 @@ extends AnimatedSprite2D
 
 @export var throwable : PackedScene
 @export var sfxPlayer : AudioStreamPlayer
+@export var sprite : AnimatedSprite2D
 
 const HAMMER_TIME = 2
 
@@ -13,18 +14,18 @@ func _ready():
 	
 	sfxPlayer.volume_db = (0.6*Global.volumeSound) - 80
 	elapsedTime = HAMMER_TIME / 2
-	play("idle")
+	sprite.play("idle")
+	print(sprite.animation)
 
 func _process(delta):
-	if delta >= HAMMER_TIME * 1 / 3:
-		play("throw")
-	else: if delta >= HAMMER_TIME * 2/ 3:
-		play("idle")
-	else: if delta >= HAMMER_TIME:
-		play("prep throw")
+	if elapsedTime <= 1:
+		sprite.play("prep throw")
+	else: if elapsedTime >= 1:
+		sprite.play("throw")
+		print(HAMMER_TIME)
 	elapsedTime += delta
 	if elapsedTime >= HAMMER_TIME:
-		play("throw")
+		sprite.play("throw")
 		throwHammer()
 		sfxPlayer.play()
 		elapsedTime = 0

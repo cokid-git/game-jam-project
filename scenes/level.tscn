@@ -20,8 +20,7 @@ script = ExtResource("2_w7c3h")
 z_index = -1
 
 [node name="goal" parent="." instance=ExtResource("3_w8frs")]
-position = Vector2(1904, 980)
-scale = Vector2(0.15, 0.72343713)
+position = Vector2(1907.0001, 1004)
 
 [node name="Darkness" parent="." instance=ExtResource("6_klq6b")]
 self_modulate = Color(1, 1, 1, 0)
