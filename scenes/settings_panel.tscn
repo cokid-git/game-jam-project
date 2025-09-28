@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://fsl7n6dqefpm"]
+[gd_scene load_steps=7 format=3 uid="uid://fsl7n6dqefpm"]
 
 [ext_resource type="Script" path="res://scripts/settings_panel.gd" id="1_54ti7"]
 [ext_resource type="Texture2D" uid="uid://dn1ssbmxkdxve" path="res://assets/ui/panel_beigeLight.png" id="1_qtqyt"]
 [ext_resource type="Texture2D" uid="uid://bmxc6x5hlyqd" path="res://assets/ui/buttonLong_brown.png" id="2_tl2iu"]
+[ext_resource type="FontFile" uid="uid://10n7wcedxe00" path="res://assets/fonts/CaveatBrush-Regular.ttf" id="3_8fxpn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tl2iu"]
 texture = ExtResource("1_qtqyt")
@@ -63,6 +64,8 @@ alignment = 1
 [node name="Label" type="Label" parent="Panel_Main/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_8fxpn")
+theme_override_font_sizes/font_size = 55
 text = "Music Volume"
 horizontal_alignment = 1
 
@@ -73,7 +76,9 @@ value = 100.0
 [node name="Label2" type="Label" parent="Panel_Main/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Music Volume"
+theme_override_fonts/font = ExtResource("3_8fxpn")
+theme_override_font_sizes/font_size = 55
+text = "SFX Volume"
 horizontal_alignment = 1
 
 [node name="HSlider2" type="HSlider" parent="Panel_Main/VBoxContainer"]
