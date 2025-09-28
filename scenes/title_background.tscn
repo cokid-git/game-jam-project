@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://ddrt2ilfy4kkl"]
+
+[ext_resource type="Texture2D" uid="uid://c6dlo7x1wc4fb" path="res://assets/placeholders/IMG_3055.PNG" id="1_oq7vo"]
+[ext_resource type="Texture2D" uid="uid://cnsthwwme7eab" path="res://assets/placeholders/IMG_3086.PNG" id="2_qbcrd"]
+[ext_resource type="Texture2D" uid="uid://bajq7auqw7je0" path="res://assets/placeholders/IMG_3081 (1).PNG" id="3_3a8le"]
+[ext_resource type="Script" uid="uid://dfm6bj5tln7gf" path="res://scripts/train.gd" id="4_3cp13"]
+[ext_resource type="Texture2D" uid="uid://vehtvepe6f7i" path="res://assets/placeholders/IMG_3082.PNG" id="5_dfcdd"]
+[ext_resource type="Texture2D" uid="uid://bsomuyhkobn7h" path="res://assets/placeholders/IMG_3084.PNG" id="6_cb1pj"]
+[ext_resource type="Texture2D" uid="uid://brqvasflu10vv" path="res://assets/placeholders/IMG_30746.png" id="7_gtuk1"]
+
+[node name="titleBackground" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(956, 538)
+scale = Vector2(0.7833449, 0.78334516)
+texture = ExtResource("1_oq7vo")
+
+[node name="Img3086" type="Sprite2D" parent="."]
+position = Vector2(968, 558.00006)
+scale = Vector2(0.83415663, 0.8341567)
+texture = ExtResource("2_qbcrd")
+
+[node name="Img3084" type="Sprite2D" parent="."]
+position = Vector2(675, 502)
+texture = ExtResource("6_cb1pj")
+
+[node name="train" type="Sprite2D" parent="."]
+position = Vector2(946, 519)
+texture = ExtResource("3_3a8le")
+script = ExtResource("4_3cp13")
+
+[node name="Img30746" type="Sprite2D" parent="."]
+position = Vector2(629.00006, 521)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("7_gtuk1")
+
+[node name="Img3082" type="Sprite2D" parent="."]
+position = Vector2(1199, 390)
+texture = ExtResource("5_dfcdd")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -1.0
+offset_top = 1080.0
+offset_right = 2953.0
+offset_bottom = 2241.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 1920.0
+offset_top = -241.0
+offset_right = 4874.0
+offset_bottom = 2290.0
+color = Color(0, 0, 0, 1)

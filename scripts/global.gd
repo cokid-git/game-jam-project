@@ -16,10 +16,15 @@ var volumeSound = 100
 
 var canPlayWhistle = false
 
+var trainMenu = 0
+
 func _ready() -> void:
 	currentAudio = audioLocation
 	
 func _process(delta: float) -> void:
+	trainMenu += 3
+	if trainMenu > 3500:
+		trainMenu = -2000
 	musicPlayer.volume_db = (0.6*volumeMusic) - 80
 	whistle.volume_db = (0.6*volumeMusic) - 80
 	if currentAudio != audioLocation:

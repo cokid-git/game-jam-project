@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://kbyds2hihel7"]
+[gd_scene load_steps=6 format=3 uid="uid://kbyds2hihel7"]
 
 [ext_resource type="Script" uid="uid://gef6otljnaur" path="res://scripts/scrolling.gd" id="2_cbsqf"]
 [ext_resource type="Texture2D" uid="uid://nquv67wudf2t" path="res://assets/background_trasnparent.png" id="3_jougr"]
 [ext_resource type="Texture2D" uid="uid://dux4aw8m37vmp" path="res://assets/uncolored_forest.png" id="3_wisxt"]
+[ext_resource type="Texture2D" uid="uid://bsomuyhkobn7h" path="res://assets/placeholders/IMG_3084.PNG" id="4_wisxt"]
+[ext_resource type="Script" uid="uid://dgr24iffutopn" path="res://scripts/tunnel.gd" id="5_wax1t"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -36,6 +38,18 @@ offset_top = -551.0
 offset_right = 862.0
 offset_bottom = 137.0
 color = Color(0.8, 0.17600003, 0.7375998, 0.5803922)
+
+[node name="Tunnel" type="Sprite2D" parent="."]
+position = Vector2(1300, -25)
+texture = ExtResource("4_wisxt")
+script = ExtResource("5_wax1t")
+
+[node name="ColorRect" type="ColorRect" parent="Tunnel"]
+offset_left = 1284.0
+offset_top = -96.0
+offset_right = 3197.0
+offset_bottom = 611.0
+color = Color(0.3647059, 0.2509804, 0.4627451, 1)
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(960, 540)

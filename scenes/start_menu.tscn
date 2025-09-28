@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://c7fwen2kcobeq"]
+[gd_scene load_steps=13 format=3 uid="uid://c7fwen2kcobeq"]
 
 [ext_resource type="Script" uid="uid://cwh6ada2hoxux" path="res://scripts/start_menu.gd" id="1_ouf4f"]
 [ext_resource type="Texture2D" uid="uid://dn1ssbmxkdxve" path="res://assets/ui/panel_beigeLight.png" id="2_h61rw"]
+[ext_resource type="PackedScene" uid="uid://ddrt2ilfy4kkl" path="res://scenes/title_background.tscn" id="3_fcv5n"]
 [ext_resource type="Texture2D" uid="uid://bmxc6x5hlyqd" path="res://assets/ui/buttonLong_brown.png" id="3_m7x51"]
 [ext_resource type="Texture2D" uid="uid://6wqny6duexg5" path="res://assets/ui/buttonLong_brown_pressed.png" id="4_h61rw"]
 
@@ -43,12 +44,14 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -443.5
-offset_top = -365.25
+offset_top = -157.25
 offset_right = 443.5
-offset_bottom = 365.25
+offset_bottom = 242.75
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_m7x51")
+
+[node name="titleBackground" parent="." instance=ExtResource("3_fcv5n")]
 
 [node name="Panel_Main" type="Panel" parent="."]
 layout_mode = 1
@@ -58,9 +61,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -443.5
-offset_top = -365.25
+offset_top = -157.25
 offset_right = 443.5
-offset_bottom = 365.25
+offset_bottom = 242.75
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_m7x51")
